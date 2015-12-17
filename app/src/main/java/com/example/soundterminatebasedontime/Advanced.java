@@ -6,20 +6,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Basics extends AppCompatActivity {
-
+public class Advanced extends AppCompatActivity {
 
     // Create and set MediaPlayer to car_alarm sound file
     final MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.car_alarm);
 
     // Finds the buttons in xml and creates a object in java for use
     Button playCarAlarmFull = (Button) findViewById(R.id.button_car_alarm_full);
-    Button playCarAlarmFiveSeconds = (Button) findViewById(R.id.car_alarm_five_seconds);
+    Button playCarAlarmFiveSeconds = (Button) findViewById(R.id.button_car_alarm_five_seconds);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_advanced);
 
         // Calls buttonClicks method
         buttonClicks();
@@ -34,7 +33,6 @@ public class Basics extends AppCompatActivity {
     }
 
     public void playCarAlarmFull() {
-
         // Plays car alarm sound file. If sound is already being played the method restarts the sound
         playCarAlarmFull.setOnClickListener(new View.OnClickListener() {
             @Override
